@@ -1,202 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Catarina Pires</title>
-  <link rel="icon" href="./assets/profile.jpg" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="mediaqueries.css" />
-</head>
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="assets/img/profile.png"
+      type="image/x-icon"
+    />
 
-<body>
-  <nav id="desktop-nav">
-    <div class="logo"><a href="">Catarina Pires</a></div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-  <nav id="hamburger-nav">
-    <div class="logo">Catarina Pires</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="menu-links">
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li>
-          <a href="#publications" onclick="toggleMenu()">Publications</a>
-        </li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-      </div>
-    </div>
-  </nav>
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+    />
 
-  <div class="container">
-    <section id="profile">
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img src="./assets/profile.jpg" id="profile-pic" alt="Catarina Pires profile picture" />
-        </div>
-        <div class="section__text">
-          <p class="section__text__p1">Hello, I'm</p>
-          <h1 class="title">Catarina Pires</h1>
-          <p class="section__text__p2">
-            Research Assistant at <b><a href="https://www.inesctec.pt/">INESC TEC</a></b>
-          </p>
-          <p class="section__text__p2">
-            Master's in Informatics and Computing Engineering
-          </p>
-          <div class="btn-container">
-            <button class="btn btn-color-2" onclick="window.open('./assets/cv.pdf')">
-              Download CV
-            </button>
-            <button class="btn btn-color-1" onclick="location.href='./#contact'">
-              Contact Info
-            </button>
-          </div>
-          <div id="socials-container">
-            <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon clickable"
-              onclick="location.href='https://www.linkedin.com/in/catarinaopires/'" />
-            <img src="./assets/github.png" alt="My Github profile" class="icon clickable"
-              onclick="location.href='https://github.com/catarinaopires'" />
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Catarina Pires</title>
+  </head>
+  <body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo">Catarina Pires</a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About Me</a>
+            </li>
+            <li class="nav__item">
+              <a href="#publications" class="nav__link">Publications</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="button">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Close button -->
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img src="./assets/photo.jpg" alt="Profile picture" class="about-pic" />
+
+        <div class="nav__actions">
+          <!-- Theme button -->
+          <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+          <!-- Toggle button -->
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-apps-2-line"></i>
+          </div>
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-              <h3>Experience</h3>
-              <p>1+ years <br />Research assistant</p>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home section" id="home">
+        <!-- <div class="home__rectangle"></div> -->
+        <div class="home__container container grid">
+          <div class="home__perfil perfil">
+            <div class="perfil__content">
+              <img
+                src="assets/img/profile.png"
+                alt="image"
+                class="perfil__img"
+              />
             </div>
-            <div class="details-container">
-              <img src="./assets/education.png" alt="Education icon" class="icon" />
-              <h3>Education</h3>
-              <p>
+          </div>
+
+          <div class="home__content grid">
+            <div class="perfil__data grid">
+              <h1 class="home__name">Catarina Pires</h1>
+              <h2 class="home__profession">
+                Research Assistant at
+                <b><a href="https://www.inesctec.pt/">INESC TEC</a></b>
+              </h2>
+              <h4>M.Sc. in Informatics and Computing Engineering</h4>
+
+              <div class="home__social">
+                <a
+                  href="https://github.com/catarinaopires"
+                  class="home__social-link"
+                  ><i class="ri-github-fill"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/catarinaopires/"
+                  class="home__social-link"
+                  ><i class="ri-linkedin-box-fill"></i
+                ></a>
+              </div>
+            </div>
+
+            <a href="assets/pdf/cv.pdf" download="" class="home__button button"
+              >Download CV</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!--==================== ABOUT ME ====================-->
+      <section class="about section" id="about">
+        <h2 class="section__title">Get To Know More<br />About Me</h2>
+
+        <div class="about__skills">
+          <div class="about__skills-content grid">
+            <article class="about__skills-container">
+              <h2 class="services__title">Experience</h2>
+              <p class="services__description">
+                1+ years<br />Research Assistant
+              </p>
+            </article>
+
+            <article class="about__skills-container">
+              <h2 class="services__title">Education</h2>
+              <p class="services__description">
                 M.Sc. in Informatics and Computing Engineering
               </p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              <b>Hi!</b> I'm Catarina Pires, and I recently completed my Master's in Informatics and Computing Engineering at 
-              <b><a href="https://sigarra.up.pt/feup/pt/web_page.inicial">FEUP</a></b>. 
-              My dissertation focused on multimodal search, integrating text and images, 
-              exploring the intersections of information systems, artificial intelligence, and computer vision—my key areas of interest. 
-              Alongside my academic work, I am an Assistant Researcher at <b><a href="https://www.inesctec.pt/">INESC TEC</a></b>, where I apply my research to innovative applications in the medical field.
-            </p>
-            <br />
-            <p>
-              <b>I'm passionate about technology, constantly eager to learn new
-                things and embrace new challenges.</b>
-            </p>
-            <br />
-            <p>
-              Beyond work, I enjoy spending time with friends, watching movies
-              and TV series, and both playing and listening to music as a member
-              of the philharmonic band
-              <a href="https://filarmonicavizelense.com/index.php">"Banda da SFV"</a>.
-            </p>
+            </article>
           </div>
         </div>
-      </div>
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow clickable"
-        onclick="location.href='./#publications'" />
-    </section>
-    <section id="publications">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Publications</h1>
-      <div class="section-container">
-        <div class="pub-details-container">
-          <div class="pub-containers">
-            <div class="pub-container">
-              <h3>
-                Knowledge Discovery and Information Retrieval (<a href="https://kdir.scitevents.org/">KDIR
-                  2024</a>)
-              </h3>
-              <p>
-                <i>accepted</i>
-              </p>
-            </div>
-            <div class="pub-container">
-              <h3>
-                Linking Theory and Practice of Digital Libraries (<a href="https://tpdl2023.dei.unipd.it/">TPDL
-                  2023</a>)
-              </h3>
-              <p>
-                Koch, I., Pires, C., Teixeira Lopes, C., Ribeiro, C., Nunes, S.
-                (2023). From ISAD(G) to Linked Data Archival Descriptions. In:
-                Alonso, O., Cousijn, H., Silvello, G., Marrero, M., Teixeira
-                Lopes, C., Marchesin, S. (eds) Linking Theory and Practice of
-                Digital Libraries. TPDL 2023. Lecture Notes in Computer Science,
-                vol 14241. Springer, Cham.
-                <a href="https://doi.org/10.1007/978-3-031-43849-3_27">https://doi.org/10.1007/978-3-031-43849-3_27</a>
-              </p>
-            </div>
 
-            <div class="pub-container">
-              <h3>Data set</h3>
-              <p>
-                Pires, C., Koch, I., & Nunes, S. (2023). ArchOnto ontology
-                representation of Portuguese archival description units (baptism
-                records and passports). [Data set]. INESC TEC.
-                <a href="https://doi.org/10.25747/X78E-1A27">https://doi.org/10.25747/X78E-1A27</a>
-              </p>
+        <div class="about__container about__page container grid">
+          <div class="about__perfil perfil">
+            <div class="perfil__content">
+              <img
+                src="assets/img/about-perfil.png"
+                alt="image"
+                class="perfil__img"
+              />
+            </div>
+          </div>
+
+          <div class="about__content grid">
+            <div class="about__data grid">
+              <div class="about__info grid">
+                <h1 class="about__name">Catarina Pires</h1>
+                <h2 class="about__profession">
+                  M.Sc. in Informatics and Computing Engineering
+                </h2>
+                <p class="about__description">
+                  <b>Hi!</b> I'm Catarina Pires, and I recently completed my
+                  Master's in Informatics and Computing Engineering at
+                  <b
+                    ><a href="https://sigarra.up.pt/feup/pt/web_page.inicial"
+                      >FEUP</a
+                    ></b
+                  >.
+                  <a href="https://repositorio-aberto.up.pt/handle/10216/161056"
+                    >My dissertation</a
+                  >
+                  focused on multimodal search, integrating text and images,
+                  exploring the intersections of information systems, artificial
+                  intelligence, and computer vision—my key areas of interest.
+                  Alongside my academic work, I am an Assistant Researcher at
+                  <b><a href="https://www.inesctec.pt/">INESC TEC</a></b
+                  >, where I apply my research to innovative applications in the
+                  medical field.
+                </p>
+                <br />
+                <p class="about__description">
+                  <b
+                    >I'm passionate about technology, constantly eager to learn
+                    new things and embrace new challenges.</b
+                  >
+                </p>
+                <br />
+                <p class="about__description">
+                  Beyond work, I enjoy spending time with friends, watching
+                  movies and TV series, and both playing and listening to music
+                  as a member of the philharmonic band
+                  <a href="https://filarmonicavizelense.com/index.php"
+                    >"Banda da SFV"</a
+                  >.
+                </p>
+              </div>
+
+              <a href="contact.html" class="about__button button">Contact Me</a>
             </div>
           </div>
         </div>
-      </div>
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow clickable"
-        onclick="location.href='./#contact'" />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <a href="mailto:catarina.o.pires@hotmail.com"><img src="./assets/email.png" alt="Email icon"
-              class="icon clickable email-icon" />
-            <p>Mail&nbsp;
-          </a></p>
+      </section>
+
+      <!--==================== PUBLICATIONS ====================-->
+      <section class="work section" id="publications">
+        <h2 class="section__title">
+          Explore My <br />
+          Publications
+        </h2>
+
+        <div class="pub__container container grid">
+          <article class="pub__card">
+            <h2 class="pub__title">
+              Knowledge Discovery and Information Retrieval (<a
+                href="https://kdir.scitevents.org/"
+                >KDIR 2024</a
+              >)
+            </h2>
+            <p class="pub__description">
+              <i>accepted</i>
+            </p>
+          </article>
+
+          <article class="pub__card">
+            <h2 class="pub__title">
+              Evaluating Dense Model-based Approaches for Multimodal Ad hoc
+              Search
+            </h2>
+            <p class="pub__description">
+              <i>Master's dissertation (2024)</i>
+            </p>
+
+            <a
+              href="https://repositorio-aberto.up.pt/handle/10216/161056"
+              class="pub__button button"
+              >Know More</a
+            >
+          </article>
+
+          <article class="pub__card">
+            <h2 class="pub__title">
+              Linking Theory and Practice of Digital Libraries (<a
+                href="https://tpdl2023.dei.unipd.it/"
+                >TPDL 2023</a
+              >)
+            </h2>
+            <p class="pub__description">
+              Koch, I., Pires, C., Teixeira Lopes, C., Ribeiro, C., Nunes, S.
+              (2023). From ISAD(G) to Linked Data Archival Descriptions. In:
+              Alonso, O., Cousijn, H., Silvello, G., Marrero, M., Teixeira
+              Lopes, C., Marchesin, S. (eds) Linking Theory and Practice of
+              Digital Libraries. TPDL 2023. Lecture Notes in Computer Science,
+              vol 14241. Springer, Cham.
+            </p>
+
+            <a
+              href="https://doi.org/10.1007/978-3-031-43849-3_27"
+              class="pub__button button"
+              >Know More</a
+            >
+          </article>
+
+          <article class="pub__card">
+            <h2 class="pub__title">Data set</h2>
+            <p class="pub__description">
+              Pires, C., Koch, I., & Nunes, S. (2023). ArchOnto ontology
+              representation of Portuguese archival description units (baptism
+              records and passports). [Data set]. INESC TEC.
+            </p>
+
+            <a
+              href="https://doi.org/10.25747/X78E-1A27"
+              class="pub__button button"
+              >Know More</a
+            >
+          </article>
         </div>
-        <div class="contact-info-container">
-          <a href="https://www.linkedin.com/in/catarinaopires/"><img src="./assets/linkedin.png" alt="LinkedIn icon"
-              class="icon clickable contact-icon" />
-            <p>
-              LinkedIn
-          </a>
-          </p>
+      </section>
+
+      <!--==================== CONTACT ====================-->
+      <section class="contact section" id="contact">
+        <div class="contact__container container grid">
+          <h2 class="section__title">Get in Touch<br />Contact Me</h2>
+
+          <div class="contact__social grid">
+            <a
+              href="mailto:catarina.o.pires@hotmail.com"
+              class="contact__button home__social-link"
+              ><i class="ri-mail-fill"></i
+            ></a>
+            <a
+              href="https://github.com/catarinaopires"
+              class="contact__button home__social-link"
+              ><i class="ri-github-fill"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/catarinaopires/"
+              class="contact__button home__social-link"
+              ><i class="ri-linkedin-box-fill"></i
+            ></a>
+          </div>
         </div>
+      </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+      <div class="footer__container container grid">
+        <div class="footer__content grid">
+          <a href="index.html" class="footer__logo">Catarina Pires</a>
+
+          <ul class="footer__links">
+            <li>
+              <a href="about.html" class="footer__link">About Me</a>
+            </li>
+            <li>
+              <a href="work.html" class="footer__link">Publications</a>
+            </li>
+            <li>
+              <a href="contact.html" class="footer__link">Contact Me</a>
+            </li>
+          </ul>
+
+          <div class="footer__social">
+            <a
+              href="https://github.com/catarinaopires"
+              class="footer__social-link"
+              ><i class="ri-github-fill"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/catarinaopires/"
+              class="footer__social-link"
+              ><i class="ri-linkedin-box-fill"></i
+            ></a>
+          </div>
+        </div>
+
+        <span class="footer__copy">
+          &#169; All Rights Reserved By catarinaopires
+        </span>
       </div>
+    </footer>
 
-      <p class="footer">
-        Copyright &#169;
-        <script>
-          document.write(new Date().getFullYear());
-        </script>
-        Catarina Pires. All Rights Reserved.
-      </p>
-    </section>
+    <!--========== SCROLL UP ==========-->
+    <a href="#home" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-line"></i>
+    </a>
 
-  </div>
-  <script src="script.js"></script>
-</body>
-
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
