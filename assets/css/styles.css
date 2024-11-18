@@ -492,6 +492,15 @@ header {
   cursor: pointer;
 }
 
+.pub__button_div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
 /*=============== CONTACT ===============*/
 .contact__container {
   padding-block: 4rem;
@@ -725,7 +734,7 @@ header {
   }
 
   .home__social-link {
-    color: var(--first-color);
+    color: var(--title-color);
   }
 
   .home__button {
